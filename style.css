@@ -1,0 +1,283 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*todo ============= Framework ============= */
+
+.container {
+
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*? Media */
+
+/* Small */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+  }
+}
+
+/* Large */
+
+@media (min-width: 1200px) {
+  
+    .container {
+        width: 1170px;
+  }
+}
+
+/*? font */
+
+@media (max-width:470px) {
+    .media-font {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:300px) {
+    .media-font {
+        font-size: 10px;
+    }
+}
+
+/*? Global Styling  */
+
+p {
+    line-height: 1.2;
+}
+
+/*? Watermark */
+/* The Water Mark (start) */
+
+.watermark {
+
+    z-index: 9999999;
+    transform: rotate(-15deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    font-size: 2em;
+    opacity: 0.4;
+    right: 2%;
+    bottom: 4%;
+    background-color: #333;
+    color: #fff;
+    padding: 9px;
+    border-radius: 12px;
+    position: fixed;
+}
+
+@media (max-width:300px) {
+    .watermark {
+        font-size: 1em;
+    }
+}
+
+/* The Water Mark (end) */
+
+/*todo ============= Framework ============= */
+
+/* =============== Styling ===============  */
+
+html , body {
+
+    overflow-x: hidden;
+}
+
+body {
+
+    font-size: 15px;
+    font-family: 'League Spartan', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-pattern-bottom-desktop.svg);
+    background-size: cover;
+    padding: 30px 0;
+}
+
+body > div {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/** First Main  */
+
+main:first-of-type {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main .text-content h1 {
+
+    color: hsl(300, 43%, 22%);
+    font-size: 3em;
+}
+
+main .text-content p {
+
+    margin-top: 1.4em;
+    color: hsl(303, 10%, 53%);
+}
+
+main .rating-blocks {
+
+    width: 363px;
+}
+
+main .rating-blocks .block {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(300, 24%, 96%);
+    padding: 1em 2.4em;
+    border-radius: 6px;
+}
+
+main .rating-blocks .block:nth-of-type(2) {
+
+    margin: 1em 0;
+    margin-left: 2em;
+}
+
+main .rating-blocks .block:last-of-type {
+
+    margin-left: 4em;
+}
+
+main .rating-blocks .block > p {
+
+    margin-left: 1.5em;
+    color: hsl(300, 43%, 22%);
+    font-weight: bold;
+}
+
+@media (max-width: 840px) {
+  
+    main .rating-blocks .block {
+        margin-left: 0 !important;
+    }
+}
+
+/** Second Main  */
+
+main.cards {
+
+    margin-top: 3.5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 30px;
+}
+
+main .card {
+
+    background-color: hsl(300, 43%, 22%);
+    padding: 23px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 224.48px;
+}
+
+main .card:nth-of-type(2) {
+    margin-top: 1em;
+}
+
+main .card:nth-of-type(3) {
+    margin-top: 2em;
+}
+
+main .card .info {
+
+    display: flex;
+}
+
+main .card .info img {
+
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+main .card .info > div .name {
+
+    color: #fff;
+}
+
+main .card .info > div .title {
+
+    color: hsl(333, 80%, 67%);
+}
+
+main .card .comment {
+
+    color: #ffffffc7;
+    line-height: 1.5;
+    margin-top: 2em;
+}
+
+@media (max-width: 769px) {
+
+    main:first-of-type {
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    .text-content {
+        text-align: center;
+    }
+    main:first-of-type h1 {
+        margin-top: 60px;
+    }
+    main .text-content p {
+        margin: 1.4em 0;
+    }
+    main .rating-blocks .block {
+        flex-direction: column;
+        width: 330px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+    main .rating-blocks .block .stars {
+        margin-bottom: 6px;
+    }
+    main.cards {
+        gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main .card {
+        margin-top: 0 !important;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }   
+}
